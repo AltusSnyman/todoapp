@@ -24,10 +24,8 @@ export function Login({ onLogin }: LoginProps) {
     };
 
     return (
-        <div className="min-h-screen w-full flex items-center justify-center p-4">
-            {/* Background elements to match the app theme */}
-            <div className="fixed inset-0 bg-[#0f172a] -z-10" />
-            <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/20 via-slate-900/0 to-slate-900/0 -z-10" />
+        <div className="min-h-screen w-full flex items-center justify-center p-4 relative z-10">
+            {/* Using global body background instead of local layers */}
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
